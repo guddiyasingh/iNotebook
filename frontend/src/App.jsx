@@ -1,5 +1,5 @@
 
-import { Route, BrowserRouter as Router,Routes,Routes } from "react-router-dom";
+import {  BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/Home/Home"
 import Login from "./pages/Login/Login";
@@ -23,13 +23,10 @@ const routes = (
 
 function App ()  {
 
- 
-
-
   return (
-    <>
-   
-    </>
+   <div>
+    {routes}
+   </div>
   )
 }
 

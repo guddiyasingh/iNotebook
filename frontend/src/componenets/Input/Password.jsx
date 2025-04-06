@@ -1,5 +1,5 @@
 import React from 'react'
-
+import React, {useState} from "react";
 const Password = ({value, onChange, placeholder}) => {
 
     const [isShoePassword,setIsShowPassword] = useState(false);
@@ -20,6 +20,11 @@ const Password = ({value, onChange, placeholder}) => {
       placeholder={placeholder || "password"}
       className='w-full text-sm bg-transparent py-3 mr-3 rounded outline-none'
       />
+
+      <FaRegEye
+      size = {22}
+      className = "text-primary cursor-pointer"
+      onclick ={() =>toggleShowPassword() } />
     </div>
   )
 }

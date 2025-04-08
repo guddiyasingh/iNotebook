@@ -2,6 +2,12 @@ import React from 'react'
 import Navbar from '../../componenets/Navbar/Navbar'
 
 const SignUp = () => {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error , setError] = useState(null);
+
   const handleSignUp = async (e) => {
     e.preventDefault();
   };
@@ -16,10 +22,10 @@ const SignUp = () => {
 
       <input 
       type="text" 
-      placeholder='Email' 
+      placeholder='Name' 
       className='input-box' 
-      // value={email}
-      // onChange={(e) =>setEmail(e.target.value)}
+      value={email}
+      onChange={(e) =>setName(e.target.value)}
       />
       </form>
     </div>

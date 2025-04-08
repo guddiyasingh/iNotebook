@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../componenets/Navbar/Navbar'
 import PasswordInput from '../../componenets/Input/Password'
+import { validateEmail } from '../../utils/helper'
 
 const Login = () => {
 
@@ -12,7 +13,18 @@ const [error , setError] = useState(null);
 
 const handleLogin = async (e) => {
   e.preventDefault();
-}
+
+  if(!validateEmail(email)){
+    setError("Please enter a valid email address.");
+    return;
+  }
+
+  if (!password) {
+    setError("please enter the password");
+    return;
+  }
+  setError("")
+};
   return (
 <>
 <Navbar />
@@ -25,14 +37,14 @@ const handleLogin = async (e) => {
       placeholder='Email' 
       className='input-box' 
       value={email}
-      onChange={(e) =>setEmail(e.target)}
+      onChange={(e) =>setEmail(e.target.value)}
       />
       
       <PasswordInput 
       value = {password}
       onChange={(e) =>setPassword(e.target.value)}
       />
-
+      {error && <p className='text-red-500 text-xs pb-1'>{error}</p>}
       <button type='submit' className='btn-primary'>
         Login
       </button>

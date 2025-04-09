@@ -3,6 +3,8 @@ import Navbar from '../../componenets/Navbar/Navbar'
 import  { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { validateEmail } from '../../utils/helper'
+import PasswordInput from '../../componenets/Input/Password'
+
 const SignUp = () => {
 
   const [name, setName] = useState("");
@@ -41,11 +43,11 @@ const SignUp = () => {
       type="text" 
       placeholder='Name' 
       className='input-box' 
-      value={email}
+      value={name}
       onChange={(e) =>setName(e.target.value)}
       />
 
-<input 
+     <input 
       type="text" 
       placeholder='Email' 
       className='input-box' 
@@ -58,7 +60,7 @@ const SignUp = () => {
       onChange={(e) =>setPassword(e.target.value)}
       />
 
-{error && <p className='text-red-500 text-xs pb-1'>{error}</p>}
+  {error && <p className='text-red-500 text-xs pb-1'>{error}</p>}
       <button type='submit' className='btn-primary'>
         Create Account
       </button>

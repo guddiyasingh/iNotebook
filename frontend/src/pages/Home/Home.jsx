@@ -10,7 +10,16 @@ const Home = () => {
    <div className='container mx-auto'>
     
 
-    <NoteCard title="Meeting on 7th April" date="3rd Apr 2024" content/>
+    <NoteCard 
+    title="Meeting on 7th April" 
+    date="3rd Apr 2024" 
+    content="Meeting on 7th April"
+    tags= "#Meeting"
+    isPinned ={true}
+    onEdit={()=>{} }
+    onDelete={()=>{}}
+    onPinNote={()=>{}}
+    />
    </div>
     </>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../componenets/Navbar/Navbar'
 import NoteCard from '../../componenets/Cards/NoteCard'
 import { MdAdd } from 'react-icons/md';
+import AddEditNotes from './AddEditNotes';
 
 const Home = () => {
   return (
@@ -22,37 +23,7 @@ const Home = () => {
     onPinNote={()=> {}}
     />
 
-<NoteCard 
-    title="Meeting on 7th April" 
-    date="3rd Apr 2024" 
-    content="Meeting on 7th April"
-    tags= "#Meeting"
-    isPinned ={true}
-    onEdit={()=> {} }
-    onDelete={()=> {}}
-    onPinNote={()=> {}}
-    />
 
-<NoteCard 
-    title="Meeting on 7th April" 
-    date="3rd Apr 2024" 
-    content="Meeting on 7th April"
-    tags= "#Meeting"
-    isPinned ={true}
-    onEdit={()=> {} }
-    onDelete={()=> {}}
-    onPinNote={()=> {}}
-    />
-     <NoteCard 
-    title="Meeting on 7th April" 
-    date="3rd Apr 2024" 
-    content="Meeting on 7th April"
-    tags= "#Meeting"
-    isPinned ={true}
-    onEdit={()=> {} }
-    onDelete={()=> {}}
-    onPinNote={()=> {}}
-    />
    </div>
    </div>
 
@@ -61,6 +32,7 @@ const Home = () => {
    
     <MdAdd className="text-[32px] text-white" />
    </button>
+   <AddEditNotes/>
     </>
   );
 }

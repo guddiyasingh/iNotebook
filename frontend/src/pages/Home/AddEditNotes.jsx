@@ -16,7 +16,7 @@ const AddEditNotes = () => {
         type="text"
         className='text-sm text-slate-950 outline-none bg-slate-50 p-2 rounded'
         placeholder='Content'
-        rows={5}
+        rows={6}
         />
       </div>
       <div className='mt-3'>

@@ -16,11 +16,14 @@ const AddEditNotes = () => {
         type="text"
         className='text-sm text-slate-950 outline-none bg-slate-50 p-2 rounded'
         placeholder='Content'
-        rows={10}/>
+        rows={5}
+        />
       </div>
       <div className='mt-3'>
       <lable className="input-lable">TAGS</lable>
-      </div>
+     </div>
+     <button className='btn-primary font-medium mb-10 p-3' onClick={() =>{}}>
+      ADD</button>
     </div>
   )
 }

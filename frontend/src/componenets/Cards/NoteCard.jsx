@@ -10,7 +10,7 @@ const NoteCard = ({title,
     onDelete,
     onPinNote}) => {
   return (
-    <div className='border rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out'>
+    <div className='border rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out outline-none'>
         <div className='flex items-center justify-between mt-2'>
         <div>
             <h6 className='text-sm font-medium'>{title}</h6>

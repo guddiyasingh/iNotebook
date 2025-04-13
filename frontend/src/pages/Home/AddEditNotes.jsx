@@ -21,6 +21,7 @@ const AddEditNotes = () => {
       </div>
       <div className='mt-3'>
       <lable className="input-lable">TAGS</lable>
+      <TagInput />
      </div>
      <button className='btn-primary font-medium mb-10 p-3' onClick={() =>{}}>
       ADD</button>
